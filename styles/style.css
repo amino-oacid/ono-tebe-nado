@@ -1,33 +1,33 @@
 
+/*Стили для шапки страницы*/
+
 .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 92px 24px 90px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    margin: 92px 24px 90px;
     font-weight: 400;
     font-size: 18px;
-    letter-spacing: 0.01em;
+    font-style: normal;
     line-height: 24px;
+    letter-spacing: 0.01em;
 }
 
 .header__menu {
-    margin-left: 26px;
+    padding-left: 26px;
 }
 
 .header__links-list {
     display: flex;
-    gap: 31.48px;
-
-    list-style-type: circle;
+    gap: 31.5px;
+    list-style: circle;
 }
 
-.header__links-list-item_no-bullit {
-    list-style: none;
+.header__links-list-item_no-bullit { 
+    list-style-type: none;
 }
 
+/*Свойство, чтобы отодвинуть нижнее подчеркивание у ссылок*/
 a {
     text-underline-offset: 4px;
 }
@@ -52,28 +52,27 @@ a {
 .address {
     display: flex;
     flex-direction: column;
-
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
     font-size: 18px;
-    letter-spacing: 0.01em;
+    font-style: inherit;
     line-height: 24px;
-    color: #000000;
+    letter-spacing: 0.01em;
 }
 
 .header__address {
     justify-self: end;
-    margin-right: 58px;
+    padding-right: 58px;
 }
+
+/*Стили для первой секции*/
 
 .cover {
     position: relative;
+    padding: 165px 50px 50px 50px;
+
     background-image: url(../images/cover.jpg);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    padding: 165px 50px 50px 50px;
 }
 
 .overlay {
@@ -89,19 +88,16 @@ a {
 
 .cover__title {
     position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 13px;
-    z-index: 1;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    gap: 12px;
+    color: #ffffff;
     font-weight: 700;
     font-size: 100px;
     line-height: 115%;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #FFFFFF;
 }
 
 .aligned-text_center {
@@ -123,56 +119,49 @@ a {
 
 .cover__description {
     position: relative;
+    z-index: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 79px;
-    padding: 135px 0 0;
-    z-index: 1;
+    gap: 80px;
+    padding: 136px 0 0;
 }
 
 .cover__description-text {
-    word-spacing: 18px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #ffffff;
     font-weight: 400;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    word-spacing: 18px;
 }
 
 .bet-button {
     box-sizing: border-box;
-    border: 1px solid #FFFFFF;
-    background-color: transparent;
+    border: 1px solid #ffffff;
     padding: 12px 32px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #ffffff;
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
+    background-color: transparent;
 }
 
+/*Стили для секции c карточками*/
+
 .lots {
-    margin: 179px 24px 0px; 
+    margin: 180px 24px 180px;
 }
 
 .lots__heading {
     padding-left: 40px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #000000;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
     text-transform: uppercase;
-    color: #000000;
 }
 
 .lots__card-list {
@@ -180,14 +169,13 @@ a {
     flex-direction: row;
     justify-content: center;
     gap: 25px;
-
-    list-style-type: none;
+    list-style: none;
 }
 
 .lots__card-list-item {
-    margin-top: 27px;
     width: 334px;
-    min-height: 563px;
+    min-height: 560px;
+    margin-top: 26px;
 }
 
 .card {
@@ -197,20 +185,19 @@ a {
     justify-content: space-between;
     height: 100%;
     padding: 50px 40px;
-
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
 }
-  
+
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
 }
-  
+
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
 }
@@ -218,46 +205,39 @@ a {
 .card__title {
     position: relative;
     z-index: 1;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #ffffff;
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
     text-decoration: underline;
     text-transform: uppercase;
-    color: #FFFFFF;
 }
 
 .card__text {
     position: relative;
     z-index: 1;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #ffffff;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-    color: #FFFFFF;
 }
 
 .lots__look-more-link {
     display: block;
-    padding: 30px 40px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    margin: 30px 40px;
+    color: #000000;
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-    color: #000000;
 }
+
+/*Стили для секции с информацией об аукционе*/
 
 .about {
     display: grid;
     grid-template-columns: 334px 1fr;
-    margin: 150px 24px 0px;
-  }
+    margin: 0px 24px 0px;
+}
 
 .about__column {
     justify-self: center;
@@ -267,10 +247,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000000;
     width: 240px;
     height: 240px;
     border-radius: 120px;
+    background: #000000;
 }
 
 .about__logo-image {
@@ -281,26 +261,20 @@ a {
 .about__title {
     margin-left: 25px;
     padding: 100px 0px;
-
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #000000;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
     text-transform: uppercase;
-    color: #000000;
 }
 
 .about__text {
     margin-left: 25px;
- 
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #000000;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #000000;
 }
 
 .about__column_text {
@@ -309,10 +283,12 @@ a {
     gap: 24px;
 }
 
+/*Стили для подвала страницы*/
+
 .footer {
     display: flex;
     justify-content: space-between;
-    margin: 180px 50px 88px;
+    margin: 183px 50px 88px;
 }
 
 .footer__menu {
@@ -323,17 +299,15 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    list-style-type: none;
+    list-style: none;
 }
 
 .footer__menu-link {
-    font-family: 'Raleway';
-    font-style: normal;
+    color: #000000;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    color: #000000;
 }
 
 .footer__menu-link_active {
@@ -343,33 +317,10 @@ a {
 .footer__social-list {
     display: flex;
     gap: 48px;
-    list-style-type: none;
+    list-style: none;
 }
 
 .footer__social-icon {
     width: 48px;
     height: 48px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
