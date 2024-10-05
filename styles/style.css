@@ -141,12 +141,15 @@ a {
     border: 1px solid #ffffff;
     padding: 12px 32px;
     color: #ffffff;
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 22px;
+    font-style: normal;
     line-height: 26px;
     text-align: center;
     text-transform: uppercase;
     background-color: transparent;
+    cursor: pointer;
 }
 
 /*Стили для секции c карточками*/
@@ -167,15 +170,21 @@ a {
 .lots__card-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /*Свойство, чтобы карточки переносились на новую строку*/
     justify-content: center;
     gap: 25px;
     list-style: none;
 }
 
 .lots__card-list-item {
+    flex-grow: 1; /*Свойство, чтобы карточки подстраивались под ширину контейнера*/
     width: 334px;
     min-height: 560px;
     margin-top: 26px;
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 .card {
@@ -249,7 +258,7 @@ a {
     align-items: center;
     width: 240px;
     height: 240px;
-    border-radius: 120px;
+    border-radius: 50%;
     background: #000000;
 }
 
